@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Lock 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="lock-card">
+
+    <!-- หัวข้อ -->
+    <h2>กรุณากรอกรหัส</h2>
+    <p class="sub">ไว้ให้คนพิเศษ 💝</p>
+
+    <!-- จุดแสดงจำนวนรหัส -->
+    <div class="dots">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+    </div>
+
+    <!-- แป้นตัวเลข -->
+    <div class="keypad">
+        <!-- ตัวเลข 1–9 -->
+        <button onclick="pressKey(1)">1</button>
+        <button onclick="pressKey(2)">2</button>
+        <button onclick="pressKey(3)">3</button>
+        <button onclick="pressKey(4)">4</button>
+        <button onclick="pressKey(5)">5</button>
+        <button onclick="pressKey(6)">6</button>
+        <button onclick="pressKey(7)">7</button>
+        <button onclick="pressKey(8)">8</button>
+        <button onclick="pressKey(9)">9</button>
+
+        <!-- เว้นช่อง -->
+        <div></div>
+
+        <button onclick="pressKey(0)">0</button>
+
+        <!-- ลบ -->
+        <button onclick="removeKey()">⌫</button>
+    </div>
+
+    <!-- ปุ่มยืนยัน -->
+    <button class="confirm" onclick="checkPIN()">ยืนยัน</button>
+
+    <p id="error"></p>
+</div>
+
+<script>
+/* =========================
+   ตั้งค่ารหัสผ่าน
+   ========================= */
+const correctPIN = "250898";
+let inputPIN = "";
+
+/* จุดแสดงผล */
+const dots = document.querySelectorAll(".dots span");
+
+/* =========================
+   กดตัวเลข
+   ========================= */
+function pressKey(num) {
+    if (inputPIN.length < 6) {
+        inputPIN += num;
+        updateDots();
+    }
+}
+
+/* =========================
+   ลบตัวล่าสุด
+   ========================= */
+function removeKey() {
+    inputPIN = inputPIN.slice(0, -1);
+    updateDots();
+}
+
+/* =========================
+   อัปเดตจุด
+   ========================= */
+function updateDots() {
+    dots.forEach((dot, index) => {
+        dot.classList.toggle("filled", index < inputPIN.length);
+    });
+}
+
+/* =========================
+   ตรวจรหัส
+   ========================= */
+function checkPIN() {
+    const error = document.getElementById("error");
+
+    if (inputPIN === correctPIN) {
+        window.location.href = "index.html"; // หน้าแกลเลอรี่เดิม
+    } else {
+        error.textContent = "รหัสไม่ถูกต้อง 💔";
+        inputPIN = "";
+        updateDots();
+    }
+}
+</script>
+
+</body>
+</html>
+
