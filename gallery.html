@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>valentine day</title>
+  <title>Valentine Gallery</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-
-
-
-  <!-- VALENTINE FLOATING HEARTS -->
+<!-- FLOATING HEARTS -->
 <div class="hearts-bg"></div>
 
 <!-- MUSIC BUTTON -->
@@ -19,6 +16,54 @@
 <audio id="bgMusic" loop>
   <source src="gg2.mp3" type="audio/mp3">
 </audio>
+
+<div class="gallery-container">
+  <h1 class="gallery-title">Gallery with Janjira 💘</h1>
+
+  <div class="gallery">
+
+    <div class="photo"><img src="pt/IMG_2140.JPG"></div>
+    <div class="photo"><img src="pt/IMG_2480.JPG"></div>
+    <div class="photo"><img src="pt/IMG_2542.JPG"></div>
+    <div class="photo"><img src="pt/275CBF02-B808-4E81-BF9D-39291B5859A8.jpg"></div>
+    <div class="photo"><img src="pt/958575E7-14CF-47EC-A5F3-263BC38689B4.jpg"></div>
+    <div class="photo"><img src="pt/IMG_1635.JPG"></div>
+    <div class="photo"><img src="pt/01.jpg"></div>
+    <div class="photo"><img src="pt/09.jpeg"></div>
+    <div class="photo"><img src="pt/05.JPG"></div>
+
+    <div class="photo video-box">
+      <video controls preload="metadata">
+        <source src="mp4/cj0tMnNpc3FqOGc5NnNkcSZzPWpwOCZ0PWQmdT0xaXZjN3J2c2syMDAwJmk9MnM.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="photo video-box">
+      <video controls preload="metadata">
+        <source src="mp4/cj0tMWtzOWpyZG8yYXJ0cCZzPWpwOCZ0PWQmdT0xaXZjN3M0NzgyMDAwJmk9cw.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="photo video-box">
+      <video controls preload="metadata">
+        <source src="mp4/cj0tMWxxZGhxMmUzOXB1NyZzPWpwOCZ0PWQmdT0xaXZjN3Jma2cyMDAwJmk9MWc.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="photo video-box">
+      <video controls preload="metadata">
+        <source src="mp4/cj0tMWY0OXBlNGdvYnAwaCZzPWpwOCZ0PWQmdT0xaXZjN3NlbmMyMDAwJmk9Mms.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="photo video-box">
+      <video controls preload="metadata">
+        <source src="mp4/ucX6gbiqrnYc2Li-RtLKdwvSw77990S7OIHlhyyXgmA.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+</div>
 
 <script>
 const heartsContainer = document.querySelector(".hearts-bg");
@@ -34,9 +79,7 @@ function createHeart() {
 
   heartsContainer.appendChild(heart);
 
-  setTimeout(() => {
-    heart.remove();
-  }, 10000);
+  setTimeout(() => heart.remove(), 10000);
 }
 
 setInterval(createHeart, 400);
@@ -46,107 +89,11 @@ const music = document.getElementById("bgMusic");
 function toggleMusic(){
   if(music.paused){
     music.play();
-  }else{
+  } else {
     music.pause();
   }
 }
 </script>
 
-
-
-
-
-
-
-
-
-
-
-
-  <div class="gallery-container">
-    <h1 class="gallery-title">Gallery with Janjira 💘</h1>
-
-
-</div>
-      
-      <div class="photo">
-        <img src="pt/IMG_2140.JPG" alt="">
-        </div>
-
-      <div class="photo">
-        <img src="pt/IMG_2480.JPG" alt="">
-      </div>
-       
-
-      <div class="photo">
-      <img src="pt/IMG_2542.JPG" alt="">
-     </div>
-      
-
-      <div class="photo">
-        <img src="pt/275CBF02-B808-4E81-BF9D-39291B5859A8.jpg" alt="">
-      </div>
-            
-      <div class="photo">
-        <img src="pt/958575E7-14CF-47EC-A5F3-263BC38689B4.jpg" alt="">
-
-      </div>
-
-      <div class="photo">
-         <img src="pt/IMG_1635.JPG" alt="">
-      </div>
-
-       <div class="photo">
-         <img src="pt/01.jpg" alt="">
-      </div>
-     
-<div class="photo">
-         <img src="pt/09.jpeg" alt="">
-      </div>
-
-      <div class="photo">
-         <img src="pt/05.JPG" alt="">
-      </div>
-      
-    <div class="photo video-box">
-    <video controls preload="metadata">
-      <source src="mp4/cj0tMnNpc3FqOGc5NnNkcSZzPWpwOCZ0PWQmdT0xaXZjN3J2c2syMDAwJmk9MnM.mp4" type="video/mp4">
-       </video>
-  </div>
-
-      <div class="photo video-box">
-    <video controls preload="metadata">
-      <source src="mp4/cj0tMWtzOWpyZG8yYXJ0cCZzPWpwOCZ0PWQmdT0xaXZjN3M0NzgyMDAwJmk9cw.mp4" type="video/mp4">
-      
-    </video>
-  </div>
-
-  <div class="photo video-box">
-    <video controls preload="metadata">
-      <source src="mp4/cj0tMWxxZGhxMmUzOXB1NyZzPWpwOCZ0PWQmdT0xaXZjN3Jma2cyMDAwJmk9MWc.mp4" type="video/mp4">
-      
-    </video>
-  </div>
-
-  <div class="photo video-box">
-    <video controls preload="metadata">
-      <source src="mp4/cj0tMWY0OXBlNGdvYnAwaCZzPWpwOCZ0PWQmdT0xaXZjN3NlbmMyMDAwJmk9Mms.mp4" type="video/mp4">
-      
-    </video>
-  </div>
-
-  <div class="photo video-box">
-    <video controls preload="metadata">
-      <source src="mp4/ucX6gbiqrnYc2Li-RtLKdwvSw77990S7OIHlhyyXgmA.mp4" type="video/mp4">
-      
-    </video>
-  </div>
-
-  </div>
-
-
-    </div>
-  </div>
-
-
-
+</body>
+</html>
