@@ -404,29 +404,4 @@ body {
 
 
 
-.gallery-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
 
-.subtitle {
-    font-size: 1.2rem;
-    color: #ff4f81;
-    margin-top: -10px;
-    letter-spacing: 1px;
-    font-weight: 500;
-    opacity: 0.9;
-    animation: fadeIn 2s ease-in-out;
-}
-
-/* เอฟเฟกต์จาง ๆ ตอนโหลด */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 0.9;
-        transform: translateY(0);
-    }
-}
