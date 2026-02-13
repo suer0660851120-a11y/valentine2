@@ -321,7 +321,11 @@ body {
 
 
 
-
+.gallery-container {
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 20px 60px rgba(255, 0, 100, 0.3);
 
 
 
@@ -363,12 +367,7 @@ body {
   }
 }
 
-/* Gallery glow */
-.gallery-container {
-  backdrop-filter: blur(10px);
-  border-radius: 30px;
-  background: rgba(255,255,255,0.1);
-  box-shadow: 0 20px 60px rgba(255, 0, 100, 0.3);
+
 }
 
 /* Photo hover romantic effect */
