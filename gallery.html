@@ -8,6 +8,61 @@
 </head>
 <body>
 
+
+
+
+  <!-- VALENTINE FLOATING HEARTS -->
+<div class="hearts-bg"></div>
+
+<!-- MUSIC BUTTON -->
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
+<audio id="bgMusic" loop>
+  <source src="romantic.mp3" type="audio/mp3">
+</audio>
+
+<script>
+const heartsContainer = document.querySelector(".hearts-bg");
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "❤";
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+  heart.style.fontSize = (15 + Math.random() * 30) + "px";
+
+  heartsContainer.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 10000);
+}
+
+setInterval(createHeart, 400);
+
+// music
+const music = document.getElementById("bgMusic");
+function toggleMusic(){
+  if(music.paused){
+    music.play();
+  }else{
+    music.pause();
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
   <div class="gallery-container">
     <h1 class="gallery-title">My gallery 💘</h1>
 
