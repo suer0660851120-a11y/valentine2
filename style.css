@@ -1,23 +1,24 @@
+/* ============================= */
 /* RESET */
+/* ============================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BASE */
-html {
-  font-size: 16px;
-}
-
+/* ============================= */
+/* BODY GLOBAL */
+/* ============================= */
 body {
-  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   min-height: 100vh;
   background: linear-gradient(135deg, #ffafbd, #ffc3a0);
-  color: #fff;
 }
 
-/* CENTER LAYOUT */
+/* ============================= */
+/* HOME PAGE (index / login) */
+/* ============================= */
 .center {
   min-height: 100vh;
   display: flex;
@@ -25,315 +26,163 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1rem;
 }
 
-/* TEXT */
 .center h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 1rem;
 }
 
 .center p {
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-size: 1.2rem;
   margin-bottom: 2rem;
-  max-width: 600px;
 }
 
-/* BUTTON */
 .btn {
-  padding: 0.8rem 2rem;
-  font-size: 1rem;
+  padding: 12px 25px;
   border-radius: 50px;
   border: none;
+  background: #ff4d88;
+  color: white;
+  font-size: 1rem;
   cursor: pointer;
-  background: #ff5e7e;
-  color: #fff;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  background: #ff2e63;
+  background: #ff1a66;
   transform: scale(1.05);
 }
 
+/* ============================= */
+/* LOCK PAGE */
+/* ============================= */
+.lock-card {
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(12px);
+  border-radius: 30px;
+  padding: 30px;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 15px 40px rgba(255,105,180,0.4);
+  margin: auto;
+  margin-top: 100px;
+}
+
+.lock-card h2 {
+  margin-bottom: 10px;
+}
+
+.sub {
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+}
+
+.dots span.filled {
+  background: white;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.keypad button {
+  padding: 18px 0;
+  font-size: 20px;
+  border-radius: 15px;
+  border: none;
+  background: white;
+  color: #ff4d88;
+  cursor: pointer;
+}
+
+.keypad button:active {
+  transform: scale(0.95);
+}
+
+.confirm {
+  width: 100%;
+  padding: 14px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(135deg, #ff4d88, #ff85a2);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#error {
+  margin-top: 10px;
+  color: white;
+}
+
+/* ============================= */
 /* GALLERY PAGE */
+/* ============================= */
 .gallery-container {
   max-width: 1200px;
-  margin: auto;
-  padding: 2rem 1rem;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 20px 60px rgba(255, 0, 100, 0.3);
 }
 
 .gallery-title {
   text-align: center;
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 2rem;
+  text-shadow: 0 0 20px rgba(255, 0, 120, 0.8);
 }
 
-/* GRID */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.2rem;
 }
 
-/* IMAGE BOX */
 .photo {
-  background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
+  overflow: hidden;
   aspect-ratio: 1 / 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.9rem;
+  transition: 0.4s;
 }
 
-/* IMAGE STYLE (เผื่อใส่รูปจริง) */
-.photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 16px;
+.photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(255, 0, 100, 0.4);
 }
 
+.photo img,
 .video-box video {
   width: 100%;
   height: 100%;
-  border-radius: 16px;
   object-fit: cover;
 }
 
-/* ปรับ aspect ratio ให้สวย */
-.video-box {
-  aspect-ratio: 1 / 1;
-}
-/* รีเซ็ตพื้นฐาน */
-* {
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* พื้นหลังทั้งหน้า */
-body {
-    margin: 0;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #ffb6c1, #ffd1dc);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* กล่องหลัก */
-.container {
-    background: white;
-    padding: 25px;
-    border-radius: 20px;
-    width: 100%;
-    max-width: 400px; /* คุมไม่ให้กว้างเกิน */
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
-}
-
-/* หัวข้อ */
-h1 {
-    color: #ff4d88;
-}
-
-/* กล่องข้อความ */
-textarea {
-    width: 100%;
-    height: 80px;
-    border-radius: 12px;
-    border: 2px solid #ffb6c1;
-    padding: 10px;
-    margin-bottom: 15px;
-}
-
-/* ช่องรหัส */
-input {
-    width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    text-align: center;
-    border-radius: 12px;
-    border: 2px solid #ffb6c1;
-    margin-bottom: 15px;
-}
-
-/* ปุ่ม */
-button {
-    width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    background: #ff4d88;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #ff1a66;
-}
-
-/* ข้อความ error */
-#error {
-    color: red;
-    margin-top: 10px;
-}
-
-/* กล่องข้อความในหน้าแกลเลอรี่ */
-.message-box {
-    background: #fff0f5;
-    color: #ff4d88;
-    padding: 15px;
-    margin: 15px;
-    border-radius: 15px;
-    text-align: center;
-    font-size: 18px;
-    box-shadow: 0 5px 15px rgba(255,105,180,0.3);
-}
-
-
-
-
-
-
-
-
-
-
-
-* {
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-body {
-    margin: 0;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* กล่องหลัก */
-.lock-card {
-    background: rgba(255,255,255,0.3);
-    backdrop-filter: blur(10px);
-    border-radius: 30px;
-    padding: 30px 25px;
-    width: 100%;
-    max-width: 360px;
-    text-align: center;
-    color: white;
-    box-shadow: 0 15px 40px rgba(255,105,180,0.4);
-}
-
-.lock-card h2 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.sub {
-    margin-bottom: 20px;
-    opacity: 0.9;
-}
-
-/* จุดรหัส */
-.dots {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 25px;
-}
-
-.dots span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.4);
-}
-
-.dots span.filled {
-    background: white;
-}
-
-/* แป้นตัวเลข */
-.keypad {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-.keypad button {
-    padding: 18px 0;
-    font-size: 20px;
-    border-radius: 15px;
-    border: none;
-    background: rgba(255,255,255,0.9);
-    color: #ff4d88;
-    cursor: pointer;
-}
-
-.keypad button:active {
-    transform: scale(0.95);
-}
-
-/* ปุ่มยืนยัน */
-.confirm {
-    width: 100%;
-    padding: 14px;
-    border-radius: 20px;
-    border: none;
-    background: linear-gradient(135deg, #ff4d88, #ff85a2);
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-#error {
-    margin-top: 10px;
-    color: #fff;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* BODY */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #ffafbd, #ffc3a0);
-}
-
+/* ============================= */
 /* FLOATING HEARTS */
+/* ============================= */
 .hearts-bg {
   position: fixed;
   top: 0;
@@ -353,65 +202,13 @@ body {
 }
 
 @keyframes floatUp {
-  0% { transform: translateY(0) scale(1); opacity: 1; }
-  100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-110vh); opacity: 0; }
 }
 
-/* GALLERY CONTAINER */
-.gallery-container {
-  max-width: 1200px;
-  margin: 60px auto;
-  padding: 40px;
-  border-radius: 30px;
-  backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.15);
-  box-shadow: 0 20px 60px rgba(255, 0, 100, 0.3);
-}
-
-/* TITLE */
-.gallery-title {
-  text-align: center;
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 2rem;
-  text-shadow: 0 0 20px rgba(255, 0, 120, 0.8);
-  letter-spacing: 2px;
-}
-
-/* GRID */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1.2rem;
-}
-
-/* PHOTO CARD */
-.photo {
-  border-radius: 16px;
-  overflow: hidden;
-  aspect-ratio: 1 / 1;
-  transition: all 0.4s ease;
-}
-
-.photo:hover {
-  transform: scale(1.05) rotate(1deg);
-  box-shadow: 0 15px 35px rgba(255, 0, 100, 0.4);
-}
-
-/* IMAGE */
-.photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* VIDEO */
-.video-box video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+/* ============================= */
 /* MUSIC BUTTON */
+/* ============================= */
 .music-btn {
   position: fixed;
   bottom: 20px;
@@ -425,4 +222,3 @@ body {
   box-shadow: 0 10px 25px rgba(255,105,180,0.5);
   z-index: 10;
 }
-
